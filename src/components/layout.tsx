@@ -44,7 +44,15 @@ const Layout: React.FC<IProps> = ({ children }): ReactElement => {
         >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com">Gatsby</a> Develop by{" "}
+          <a
+            className="custom-color-primary"
+            href="https://rendydinar.dev"
+            target="_blank"
+            rel="noreferrer"
+          >
+            rendydinar
+          </a>
         </footer>
       </div>
     </>

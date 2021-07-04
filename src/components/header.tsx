@@ -56,6 +56,15 @@ const Header: React.FC<IProps> = ({ siteTitle }) => (
           >
             Favorit
           </Link>
+          <Link
+            to="/about"
+            style={{
+              padding: "10px",
+            }}
+            className="has-text-white"
+          >
+            About Us
+          </Link>
         </div>
       </div>
     </nav>
