@@ -3,12 +3,18 @@
 // import { Link } from "gatsby"
 
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
-const Header = ({ siteTitle }) => (
+interface IProps {
+  siteTitle: string
+}
+
+const Header: React.FC<IProps> = ({ siteTitle }) => (
   <header>
-    <nav className="navbar is-dark" style={{ marginBottom: "2em" }}>
+    <nav
+      className="navbar is-dark"
+      style={{ marginBottom: "2em", backgroundColor: "var(--color-primary)" }}
+    >
       <div className="navbar-brand">
         <Link
           to="/"
@@ -18,8 +24,8 @@ const Header = ({ siteTitle }) => (
           }}
           className="has-text-white is-size-3"
         >
-          {siteTitle} 🐶
-      </Link>
+          {siteTitle} 💡
+        </Link>
       </div>
       <div className="navbar-end" style={{ marginRight: "3em" }}>
         <div className="navbar-item">
@@ -31,7 +37,7 @@ const Header = ({ siteTitle }) => (
             className="has-text-white"
           >
             Home
-        </Link>
+          </Link>
           <Link
             to="/gallery/"
             style={{
@@ -40,16 +46,21 @@ const Header = ({ siteTitle }) => (
             className="has-text-white"
           >
             Gallery
-        </Link>
+          </Link>
+          <Link
+            to="/favorit/"
+            style={{
+              padding: "10px",
+            }}
+            className="has-text-white"
+          >
+            Favorit
+          </Link>
         </div>
       </div>
     </nav>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
 
 Header.defaultProps = {
   siteTitle: ``,

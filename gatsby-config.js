@@ -2,8 +2,8 @@ let proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
-    title: `Gastify`,
-    description: `Here lies a doggo Infinite scroll Image gallery built with Gatsby, Netlify Functions and the Unsplash API`,
+    title: `Igasfy`,
+    description: `Where you find images`,
     author: `@r3ndydinar`,
   },
   // Enables the use of function URLs locally
@@ -28,19 +28,32 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-gatsby-cloud`,
+    // manifest 
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Igasfy`,
+        short_name: `Igasfy`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: `#1f9362`,
+        theme_color: `#1f9362`,
+        display: `standalone`,
+        icon: `src/images/icon-512.png`,
+        icons: [
+          {
+            src: `src/images/icon-192.png.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/icon-512.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
       },
     },
-    `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
