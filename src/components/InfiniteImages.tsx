@@ -57,6 +57,7 @@ const InfiniteImages: React.FC<IProps> = (): ReactElement => {
     setTopic(event.target.value)
     setImages([])
     fetchImages(event.target.value)
+    window.gtag("event", "click", event.target.value)
   }
 
   // Fetch images on component mount
